@@ -62,8 +62,15 @@ function myEvery(array, callbackFunc) {
 
 // Reduce
 //will take in an array of elements and executes a callback function on each of those elements like Reduce.
-function myReduce(array, callbackFunc) {
-
+function myReduce(array, callbackFunc, curr) {
+	let cur = 0;
+	if(curr > 0 || curr < 0) {
+		cur = curr
+	}
+	for (let i = 0; i < array.length; i++) {
+		cur = callbackFunc(array[i], cur);
+	}
+	return cur;
 }
 
 //Includes
