@@ -116,16 +116,19 @@ function myUnshift(array, element) {
 //Object.keys()
 //will take in an object and return all of the keys of the key:value pairs of that object.
 function grabKeys(object){
-
+	let input = [];
+	for (let [key, value] of Object.entries(object)) {
+		input.push(key);
+	}
+	return input;
 }
-
-
 
 //Object.values()
 //will take in an object and return all of the values of the key:value pairs of that object.
 function grabValues(object){
-
+	let input = [];
+	for (let [key, value] of Object.entries(object)) {
+		input.push(value);
+	}
+	return input;
 }
-
-
-
